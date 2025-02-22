@@ -43,6 +43,7 @@ store = ModbusSlaveContext(
     hr=LoggingDataBlock(0, [0] * 100),  # Holding Registers
     ir=LoggingDataBlock(0, [0] * 100),  # Input Registers
 )
+
 context = ModbusServerContext(slaves=store, single=True)
 identity = ModbusDeviceIdentification()
 def run_server():
